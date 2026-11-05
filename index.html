@@ -100,6 +100,43 @@ body{overflow-x:hidden}
 @media(max-width:800px){.landing-image{margin-bottom:0}#about-us{padding-top:58px!important}}
 @media(max-width:560px){.landing-image{margin-bottom:0}#about-us{padding-top:58px!important}}
 
+
+/* Fluid responsive layout across desktop, tablet and mobile */
+html{width:100%;overflow-x:hidden}
+body{width:100%;min-width:0}
+main,.section-inner{width:100%;min-width:0}
+.content-section{padding:clamp(36px,6vw,96px) clamp(16px,5.5vw,88px)}
+.section-inner{max-width: min(1160px,100%)}
+.content-section h1,.content-section h2{font-size:clamp(27px,4.1vw,52px);line-height:1.12}
+.content-section h3{font-size:clamp(16px,1.55vw,20px)}
+.lead{font-size:clamp(15px,1.65vw,21px);line-height:1.65}
+.body-copy{font-size:clamp(13px,1.15vw,15px)}
+.content-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(12px,1.6vw,20px);margin-top:clamp(20px,3vw,34px)}
+.content-card{padding:clamp(17px,2.1vw,25px);min-width:0}
+.content-card p{font-size:clamp(13px,1.1vw,14px)}
+.service-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,245px),1fr));gap:clamp(12px,1.4vw,18px);margin-top:clamp(20px,3vw,34px)}
+.service-card{min-height:0;padding:clamp(17px,2vw,24px)}
+.service-card p{font-size:clamp(12px,1.05vw,13px)}
+.approach-list{grid-template-columns:repeat(auto-fit,minmax(min(100%,185px),1fr));gap:clamp(10px,1.2vw,14px)}
+.approach-step{padding:clamp(15px,1.6vw,20px)}
+.approach-step h3{font-size:clamp(14px,1.2vw,16px)}
+.approach-step p{font-size:clamp(12px,1vw,13px)}
+.insight-topics{grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:clamp(10px,1.3vw,16px)}
+.insight-topics div{padding:clamp(15px,1.7vw,20px);font-size:clamp(13px,1.1vw,14px)}
+.contact-panel{padding:clamp(18px,3.5vw,42px)}
+.values-list{gap:clamp(7px,1vw,10px)}
+.values-list span{padding:clamp(8px,.8vw,10px) clamp(11px,1.2vw,14px);font-size:clamp(10px,1vw,12px)}
+.site-footer{padding:clamp(18px,2vw,24px);font-size:clamp(10px,.9vw,11px)}
+img,svg{max-width:100%}
+@media(max-width:600px){
+ .content-section{padding-left:18px;padding-right:18px}
+ .content-section h1,.content-section h2{font-size:clamp(26px,8vw,36px)}
+ .content-grid,.service-grid,.approach-list,.insight-topics{grid-template-columns:minmax(0,1fr)}
+ .service-card{min-height:0}
+ .lead{font-size:16px}
+ .content-section{overflow-wrap:anywhere}
+}
+
 </style>
 </head>
 <body>
