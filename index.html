@@ -181,6 +181,20 @@ html{scroll-behavior:smooth;scroll-padding-top:22px}
  .content-card:before,.service-card:before,.approach-step:before,.insight-topics div:before{transition:none!important;animation:none!important}
 }
 
+
+/* One continuous translucent veil from the navigation level to the page bottom */
+main{position:relative;isolation:isolate}
+main:before{
+ content:"";position:absolute;z-index:0;pointer-events:none;
+ top:0;left:0;right:0;bottom:0;
+ background:linear-gradient(to bottom,
+  transparent 0%,
+  transparent 58%,
+  rgba(5,11,23,.16) 68%,
+  rgba(5,11,23,.22) 100%);
+}
+.landing-image,.content-section,.site-footer{position:relative;z-index:1}
+
 </style>
 </head>
 <body>
