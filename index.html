@@ -280,6 +280,31 @@ main:before{
   }
 }
 
+
+/* Final mobile layer: detach the hero CTA from image and blueprint stacking contexts */
+@media(max-width:700px){
+  .hero-cta{
+    position:fixed!important;
+    z-index:2147483000!important;
+    top:76vh!important;
+    left:50%!important;
+    right:auto!important;
+    bottom:auto!important;
+    transform:translateX(-50%)!important;
+    display:flex!important;
+    visibility:visible!important;
+    opacity:1!important;
+    width:min(76vw,420px)!important;
+    min-height:36px!important;
+    padding:9px 16px!important;
+    background:linear-gradient(115deg,#d4af37,#f6dc97,#b98b27)!important;
+    color:#080b12!important;
+    border:1px solid #ffdc91!important;
+    box-shadow:0 4px 24px rgba(0,0,0,.65),0 0 24px rgba(212,175,55,.35)!important;
+    pointer-events:auto!important;
+  }
+}
+
 </style>
 </head>
 <body>
