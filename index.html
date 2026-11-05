@@ -237,6 +237,11 @@ main:before{
 @media(max-width:700px){.hero-cta{top:62%;padding:8px 13px;font-size:8px;gap:7px}.contact-details{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.hero-cta{transition:none}}
 
+
+/* Give the existing Contact navigation item clear CTA priority */
+.site-nav a[href="#contact"]{border-color:rgba(255,220,145,.98);background:linear-gradient(115deg,rgba(212,175,55,.94),rgba(246,220,151,.92));color:#090c13;box-shadow:0 0 18px rgba(212,175,55,.14)}
+.site-nav a[href="#contact"]:hover,.site-nav a[href="#contact"]:focus-visible{background:#ffe7a8;color:#05080e;box-shadow:0 0 25px rgba(255,215,106,.32)}
+
 </style>
 </head>
 <body>
