@@ -137,6 +137,50 @@ img,svg{max-width:100%}
  .content-section{overflow-wrap:anywhere}
 }
 
+
+/* Lightweight interaction polish: GPU-friendly motion, no scroll listeners */
+html{scroll-behavior:smooth;scroll-padding-top:22px}
+.site-nav a,.content-card,.service-card,.approach-step,.insight-topics div,.contact-panel{
+ transition:transform .22s cubic-bezier(.2,.75,.25,1),border-color .22s ease,background-color .22s ease,box-shadow .22s ease,opacity .22s ease;
+}
+.content-card,.service-card,.approach-step,.insight-topics div{
+ position:relative;isolation:isolate;overflow:hidden;
+}
+.content-card:before,.service-card:before,.approach-step:before,.insight-topics div:before{
+ content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+ background:linear-gradient(115deg,transparent 15%,rgba(255,218,132,.09) 48%,transparent 78%);
+ transform:translateX(-115%);transition:transform .55s ease;
+}
+.content-card:hover,.service-card:hover,.approach-step:hover,.insight-topics div:hover,.contact-panel:hover{
+ transform:translateY(-5px);
+ border-color:rgba(255,215,106,.82)!important;
+ background-color:rgba(13,25,43,.32)!important;
+ box-shadow:0 12px 28px rgba(0,0,0,.2),0 0 18px rgba(212,175,55,.11);
+}
+.content-card:hover:before,.service-card:hover:before,.approach-step:hover:before,.insight-topics div:hover:before{transform:translateX(115%)}
+.site-nav a{will-change:transform}
+.site-nav a:hover,.site-nav a:focus-visible{box-shadow:0 7px 20px rgba(212,175,55,.18)}
+.content-card,.service-card,.approach-step,.insight-topics div{scroll-margin-top:24px}
+@media(hover:none){
+ .content-card:hover,.service-card:hover,.approach-step:hover,.insight-topics div:hover,.contact-panel:hover{transform:none;box-shadow:none}
+ .content-card:before,.service-card:before,.approach-step:before,.insight-topics div:before{display:none}
+}
+@media(prefers-reduced-motion:no-preference){
+ @supports(animation-timeline:view()){
+  .content-card,.service-card,.approach-step,.insight-topics div{
+   animation:cardEnter .55s ease both;
+   animation-timeline:view();
+   animation-range:entry 0% entry 28%;
+  }
+  @keyframes cardEnter{from{opacity:.35;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+ }
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ .site-nav a,.content-card,.service-card,.approach-step,.insight-topics div,.contact-panel,
+ .content-card:before,.service-card:before,.approach-step:before,.insight-topics div:before{transition:none!important;animation:none!important}
+}
+
 </style>
 </head>
 <body>
