@@ -20,9 +20,9 @@ body{overflow-x:hidden}
   filter:drop-shadow(0 0 3px rgba(255,205,82,.72));
   stroke-dasharray:1800;
   stroke-dashoffset:1800;
-  animation:blueprintTrace 9s cubic-bezier(.45,0,.2,1) forwards,blueprintGlow 3.2s ease-in-out 9s infinite alternate;
+  animation:blueprintTrace 22s cubic-bezier(.45,0,.2,1) infinite,blueprintGlow 3.2s ease-in-out infinite alternate;
 }
-@keyframes blueprintTrace{to{stroke-dashoffset:0}}
+@keyframes blueprintTrace{0%,4%{stroke-dashoffset:1800;opacity:.16}42%,78%{stroke-dashoffset:0;opacity:1}98%,100%{stroke-dashoffset:1800;opacity:.16}}
 @keyframes blueprintGlow{from{filter:drop-shadow(0 0 2px rgba(255,205,82,.48))}to{filter:drop-shadow(0 0 7px rgba(255,205,82,.95))}}
 @media(prefers-reduced-motion:reduce){.blueprint-svg g path,.blueprint-svg g circle,.blueprint-svg g rect,.blueprint-svg g line{animation:none;stroke-dasharray:none;stroke-dashoffset:0;filter:drop-shadow(0 0 4px rgba(255,205,82,.7))}}
 
@@ -54,6 +54,27 @@ body{overflow-x:hidden}
 <g transform="translate(850 480)" fill="none" stroke="#d4af37" stroke-opacity=".38" stroke-width="1.2"><path d="M0 310V90h80V40h70v270M95 310V120h95V75h80v235M210 310V160h75V100h85v210M325 310V55h100v255M445 310V130h90v180"/><path d="M0 90h80m-80 35h80m15-5h95m-95 35h95m20 5h75m-75 35h75m40-80h85m-85 35h85m35 0h90" stroke="#e5e7eb" stroke-opacity=".25" stroke-dasharray="4 5"/><path d="M-20 310h580M-20 320h580" stroke="#e6c687" stroke-opacity=".5"/></g>
 <g fill="#d4af37" fill-opacity=".5"><circle cx="850" cy="790" r="3"/><circle cx="930" cy="790" r="3"/><circle cx="1030" cy="790" r="3"/><circle cx="1190" cy="790" r="3"/></g>
 <g fill="none" stroke="#e5e7eb" stroke-opacity=".25"><path d="M40 40h170v100H40zM50 50h150v80H50zM1380 760h170v150h-170zM1390 770h150v130h-150z"/></g>
+
+<!-- Additional architectural figures, dimensions and engineering details -->
+<g transform="translate(610 250)" fill="none" stroke="#ffd76a" stroke-width="1.5" opacity=".9">
+ <path d="M0 360V40h18v320M-12 360h42M-8 40h34M9 40l-95 320M9 40l95 320M-52 200h122M-72 280h162M-95 360h210"/>
+ <path d="M-95 360h210M-78 330h156M-60 280h120M-40 220h80M-20 160h40" stroke-dasharray="5 6"/>
+ <circle cx="9" cy="40" r="13"/><path d="M9 27v26M-4 40h26"/>
+</g>
+<g transform="translate(1120 590)" fill="none" stroke="#ffd76a" stroke-width="1.6" opacity=".9">
+ <path d="M0 0h260v180H0zM20 20h220v140H20zM0 90h260M130 0v180M20 20l220 140M240 20 20 160"/>
+ <circle cx="130" cy="90" r="48"/><circle cx="130" cy="90" r="28"/>
+ <path d="M130 -22v44M130 158v44M-22 90h44M238 90h44"/>
+</g>
+<g transform="translate(360 690)" fill="none" stroke="#ffd76a" stroke-width="1.5" opacity=".9">
+ <path d="M0 0h250v170H0zM25 25h85v55H25zM140 25h85v120h-85zM25 105h85v40H25z"/>
+ <path d="M110 25v120M25 80h85M140 85h85M182 25v120" stroke-dasharray="4 5"/>
+ <path d="M-20 -15h290M-20 185h290M-12 -22v14M262 -22v14M-12 178v14M262 178v14"/>
+</g>
+<g transform="translate(760 130)" fill="none" stroke="#ffd76a" stroke-width="1.5" opacity=".9">
+ <circle cx="0" cy="0" r="76"/><circle cx="0" cy="0" r="56"/><circle cx="0" cy="0" r="8"/>
+ <path d="M0 -100V100M-100 0h200M-70 -70l140 140M70 -70-70 70M0 -86l10 30-10-8-10 8z"/>
+</g>
 <g fill="#e5e7eb" font-size="8" opacity=".5"><text x="55" y="60">CAVENOR / TECHNICAL DRAWING</text><text x="1398" y="785">CPA / REV 01</text><text x="1398" y="800">PROJECT ADVISORY</text></g>
 </svg>
 </div>
