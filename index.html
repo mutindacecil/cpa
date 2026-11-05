@@ -68,6 +68,20 @@ body{overflow-x:hidden}
 @media(max-width:800px){.service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.approach-list{grid-template-columns:repeat(2,minmax(0,1fr))}.insight-topics{grid-template-columns:1fr}}
 @media(max-width:560px){.content-grid,.service-grid,.approach-list{grid-template-columns:1fr}.content-section{padding:58px 20px}.content-card{padding:21px}.approach-step{padding:18px}}
 
+
+/* Keep the original blueprint visible behind all content; no solid section panels */
+.content-section{background:transparent!important;border-top:1px solid rgba(212,175,55,.18)!important}
+.content-section:nth-of-type(even){background:transparent!important}
+.content-card,.service-card,.approach-step,.insight-topics div,.contact-panel{
+ background:rgba(5,11,23,.16)!important;
+ border-color:rgba(212,175,55,.38)!important;
+ backdrop-filter:blur(1.5px);-webkit-backdrop-filter:blur(1.5px)
+}
+.content-section h1,.content-section h2{ text-shadow:0 2px 12px rgba(0,0,0,.65)}
+.content-section h3,.content-section .eyebrow,.service-number{ text-shadow:0 1px 8px rgba(0,0,0,.7)}
+.body-copy,.lead,.content-card p,.service-card p,.approach-step p{ text-shadow:0 1px 7px rgba(0,0,0,.9)}
+.site-footer{background:rgba(3,8,18,.16)!important}
+
 </style>
 </head>
 <body>
