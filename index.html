@@ -195,6 +195,27 @@ main:before{
 }
 .landing-image,.content-section,.site-footer{position:relative;z-index:1}
 
+
+/* Cinematic Cavenor gold light sweep across the hero */
+.landing-image{isolation:isolate}
+.landing-image img{position:relative;z-index:1}
+.landing-image:after{
+ content:"";position:absolute;z-index:2;inset:-18% auto -18% -48%;
+ width:34%;pointer-events:none;
+ background:linear-gradient(90deg,transparent 0%,rgba(255,220,145,.025) 22%,rgba(255,220,145,.16) 48%,rgba(255,244,205,.28) 52%,rgba(255,220,145,.10) 68%,transparent 100%);
+ filter:blur(13px);transform:skewX(-18deg) translateX(0);
+ opacity:0;mix-blend-mode:screen;
+ animation:heroGoldSweep 13s cubic-bezier(.42,0,.2,1) infinite;
+}
+@keyframes heroGoldSweep{
+ 0%,12%{left:-48%;opacity:0}
+ 18%{opacity:.72}
+ 48%{opacity:.48}
+ 66%,100%{left:118%;opacity:0}
+}
+.site-nav{z-index:3}
+@media(prefers-reduced-motion:reduce){.landing-image:after{animation:none;display:none}}
+
 </style>
 </head>
 <body>
