@@ -242,6 +242,22 @@ main:before{
 .site-nav a[href="#contact"]{border-color:rgba(255,220,145,.98);background:linear-gradient(115deg,rgba(212,175,55,.94),rgba(246,220,151,.92));color:#090c13;box-shadow:0 0 18px rgba(212,175,55,.14)}
 .site-nav a[href="#contact"]:hover,.site-nav a[href="#contact"]:focus-visible{background:#ffe7a8;color:#05080e;box-shadow:0 0 25px rgba(255,215,106,.32)}
 
+
+/* Place the wide hero CTA directly beneath the six navigation buttons */
+.hero-cta{
+ top:calc(73% + clamp(42px,6.2vw,82px));
+ width:min(54%,680px);
+ min-height:clamp(34px,4.4vw,54px);
+ padding:clamp(9px,1vw,14px) 28px;
+ letter-spacing:.16em;
+}
+@media(max-width:900px){
+ .hero-cta{top:calc(73% + clamp(38px,6.2vw,58px));width:min(64%,560px);min-height:36px}
+}
+@media(max-width:560px){
+ .hero-cta{top:calc(73% + 48px);width:min(76%,420px);min-height:34px;padding:8px 16px;font-size:8px}
+}
+
 </style>
 </head>
 <body>
