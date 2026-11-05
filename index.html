@@ -35,6 +35,39 @@ body{overflow-x:hidden}
 @media(max-width:900px){.site-nav{top:73%;width:96%;gap:clamp(2px,.65vw,6px)}.site-nav a{min-height:clamp(32px,5.2vw,48px);font-size:clamp(7px,1.45vw,13px);padding:5px 2px;letter-spacing:0;border-radius:12px}}
 @media(max-width:560px){.site-nav{top:73%;width:98%;grid-template-columns:repeat(6,minmax(0,1fr));gap:2px}.site-nav a{min-height:clamp(32px,9vw,42px);padding:4px 1px;font-size:clamp(5px,1.7vw,9px);line-height:1.1;letter-spacing:0;border-radius:12px;border-width:1px}}
 @media(prefers-reduced-motion:no-preference){.landing-image img{animation:reveal .8s ease-out both}@keyframes reveal{from{opacity:.85}to{opacity:1}}}
+
+/* Corporate content sections */
+:root{scroll-behavior:smooth;scroll-padding-top:28px}
+.content-section{position:relative;z-index:1;padding:clamp(58px,8vw,112px) max(6vw,22px);color:#f5f3ec;background:rgba(4,10,22,.84);border-top:1px solid rgba(212,175,55,.28)}
+.content-section:nth-of-type(even){background:rgba(8,17,32,.9)}
+.section-inner{width:min(1160px,100%);margin:0 auto}
+.eyebrow{margin:0 0 14px;color:#e2bd59;font:700 12px/1.4 Arial,sans-serif;letter-spacing:.22em;text-transform:uppercase}
+.content-section h1,.content-section h2{margin:0 0 20px;color:#fff;font:600 clamp(30px,4.2vw,52px)/1.12 Georgia,serif;letter-spacing:-.025em}
+.content-section h3{margin:0 0 12px;color:#f1d17b;font:600 19px/1.3 Arial,sans-serif}
+.lead{max-width:820px;color:#e5e7eb;font:400 clamp(17px,2vw,21px)/1.75 Arial,sans-serif}
+.body-copy{color:#cbd2dd;font:400 15px/1.85 Arial,sans-serif}
+.content-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:34px}
+.content-card{padding:25px;border:1px solid rgba(212,175,55,.34);border-radius:16px;background:rgba(255,255,255,.035);backdrop-filter:blur(5px)}
+.content-card p{margin:0;color:#cbd2dd;font:400 14px/1.8 Arial,sans-serif}
+.values-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.values-list span{padding:10px 14px;border:1px solid rgba(212,175,55,.42);border-radius:999px;color:#f3dfaa;background:rgba(212,175,55,.07);font:600 12px Arial,sans-serif;letter-spacing:.04em}
+.service-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:34px}
+.service-card{min-height:190px;padding:24px;border:1px solid rgba(212,175,55,.32);border-radius:15px;background:rgba(255,255,255,.035)}
+.service-number{display:block;margin-bottom:22px;color:#d4af37;font:700 12px Arial,sans-serif;letter-spacing:.16em}
+.service-card h3{font-size:17px}
+.service-card p{margin:0;color:#cbd2dd;font:400 13px/1.75 Arial,sans-serif}
+.approach-list{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:36px}
+.approach-step{padding:20px 16px;border-top:2px solid #d4af37;background:rgba(255,255,255,.035)}
+.approach-step b{display:block;margin-bottom:14px;color:#d4af37;font:700 12px Arial,sans-serif;letter-spacing:.12em}
+.approach-step h3{font-size:15px}
+.approach-step p{margin:0;color:#cbd2dd;font:400 12px/1.7 Arial,sans-serif}
+.insight-topics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:30px}
+.insight-topics div{padding:20px;border-left:2px solid #d4af37;background:rgba(255,255,255,.035);color:#d8dee8;font:600 14px/1.6 Arial,sans-serif}
+.contact-panel{margin-top:30px;padding:clamp(24px,4vw,42px);border:1px solid rgba(212,175,55,.45);border-radius:18px;background:rgba(255,255,255,.04)}
+.site-footer{position:relative;z-index:1;padding:24px;text-align:center;color:#929baa;background:#030812;font:11px Arial,sans-serif;letter-spacing:.08em}
+@media(max-width:800px){.service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.approach-list{grid-template-columns:repeat(2,minmax(0,1fr))}.insight-topics{grid-template-columns:1fr}}
+@media(max-width:560px){.content-grid,.service-grid,.approach-list{grid-template-columns:1fr}.content-section{padding:58px 20px}.content-card{padding:21px}.approach-step{padding:18px}}
+
 </style>
 </head>
 <body>
@@ -85,7 +118,68 @@ body{overflow-x:hidden}
 <a href="#home">HOME</a><a href="#about-us">ABOUT US</a><a href="#services">SERVICES</a><a href="#our-approach">OUR APPROACH</a><a href="#insights">INSIGHTS</a><a href="#contact">CONTACT</a>
 </nav>
 </section>
-<section class="blueprint-continuation" aria-hidden="true"></section>
+
+<section id="about-us" class="content-section">
+ <div class="section-inner">
+  <p class="eyebrow">About Cavenor</p>
+  <h1>Clarity in planning. Confidence in delivery.</h1>
+  <p class="lead">Cavenor Project Advisory is a Kenya-focused project management consultancy concept dedicated to supporting better planning, stronger project controls and more accountable delivery across construction and infrastructure projects.</p>
+  <div class="content-grid">
+   <article class="content-card"><h3>Our purpose</h3><p>To bring structure, accountability and professional discipline to development projects—helping decision-makers see what needs to happen, understand what is happening and act with greater confidence.</p></article>
+   <article class="content-card"><h3>Our mission</h3><p>To advance effective project planning and responsible resource management through strategic, professional and innovative project management advisory.</p></article>
+   <article class="content-card"><h3>Our vision</h3><p>To grow into a trusted project advisory practice recognised for excellence in construction and infrastructure project delivery across Africa.</p></article>
+   <article class="content-card"><h3>Our promise</h3><p>Every project deserves a clear plan, responsible management and professional execution. Our approach puts those principles at the centre of project decision-making.</p></article>
+  </div>
+  <div class="values-list" aria-label="Our values"><span>Integrity</span><span>Excellence</span><span>Accountability</span><span>Innovation</span><span>Collaboration</span><span>Sustainability</span></div>
+ </div>
+</section>
+<section id="services" class="content-section">
+ <div class="section-inner">
+  <p class="eyebrow">What we focus on</p><h2>Project advisory services</h2>
+  <p class="lead">A considered range of project management and advisory disciplines designed around the demands of construction and infrastructure development.</p>
+  <div class="service-grid">
+   <article class="service-card"><span class="service-number">01 / PLAN</span><h3>Project Planning &amp; Development</h3><p>Feasibility coordination, project preparation, implementation frameworks and practical project schedules.</p></article>
+   <article class="service-card"><span class="service-number">02 / DELIVER</span><h3>Construction Project Management</h3><p>Coordination of project participants, progress reviews, delivery schedules and structured project communication.</p></article>
+   <article class="service-card"><span class="service-number">03 / CONTROL</span><h3>Project Controls Advisory</h3><p>Schedule, cost and resource monitoring, performance dashboards and early-warning reporting.</p></article>
+   <article class="service-card"><span class="service-number">04 / PROCURE</span><h3>Procurement &amp; Contract Coordination</h3><p>Procurement planning, tender-process support, contract coordination and contractor performance tracking.</p></article>
+   <article class="service-card"><span class="service-number">05 / ASSURE</span><h3>Project Assurance &amp; Performance</h3><p>Project health reviews, performance assessments, risk reviews and delay analysis.</p></article>
+   <article class="service-card"><span class="service-number">06 / RECOVER</span><h3>Project Recovery Advisory</h3><p>Assessment of underperforming or stalled projects, recovery planning and implementation support.</p></article>
+   <article class="service-card"><span class="service-number">07 / UNDERSTAND</span><h3>Project Intelligence &amp; Research</h3><p>Sector studies, project-performance research and commissioned analytical reports.</p></article>
+  </div>
+  <p class="body-copy" style="margin-top:24px">Cavenor’s advisory focus is project management and coordination. It is not positioned as a building contractor or as a substitute for the statutory work of appropriately licensed engineers, architects or quantity surveyors.</p>
+ </div>
+</section>
+<section id="our-approach" class="content-section">
+ <div class="section-inner">
+  <p class="eyebrow">Our approach</p><h2>A disciplined path from brief to close-out.</h2>
+  <p class="lead">Good project outcomes depend on clear responsibilities, reliable information and timely decisions. Our proposed delivery framework is built around five connected stages.</p>
+  <div class="approach-list">
+   <article class="approach-step"><b>01</b><h3>Scope &amp; assess</h3><p>Understand the project brief, objectives, constraints, stakeholders and current position.</p></article>
+   <article class="approach-step"><b>02</b><h3>Plan &amp; mobilise</h3><p>Establish priorities, responsibilities, programme expectations and reporting arrangements.</p></article>
+   <article class="approach-step"><b>03</b><h3>Monitor &amp; coordinate</h3><p>Track progress, surface issues and support structured communication and decision-making.</p></article>
+   <article class="approach-step"><b>04</b><h3>Review &amp; advise</h3><p>Assess performance, risks and emerging variances, then identify practical actions.</p></article>
+   <article class="approach-step"><b>05</b><h3>Evaluate &amp; close</h3><p>Review outcomes, document lessons and support an orderly project close-out.</p></article>
+  </div>
+ </div>
+</section>
+<section id="insights" class="content-section">
+ <div class="section-inner">
+  <p class="eyebrow">Insights &amp; perspectives</p><h2>Better projects begin with better information.</h2>
+  <p class="lead">A space for practical thinking on the issues shaping construction and infrastructure project delivery in Kenya and the wider region.</p>
+  <div class="insight-topics">
+   <div>Project planning, readiness and feasibility</div><div>Project controls, cost and schedule performance</div><div>Procurement, contracts and accountability</div><div>Risk management and project recovery</div><div>Infrastructure delivery and sector developments</div><div>Research, data and project intelligence</div>
+  </div>
+  <p class="body-copy" style="margin-top:24px">Articles and research notes will be added as they are prepared and reviewed. Market statistics and external research will be attributed to their original sources.</p>
+ </div>
+</section>
+<section id="contact" class="content-section">
+ <div class="section-inner">
+  <p class="eyebrow">Contact</p><h2>Let’s start with the project brief.</h2>
+  <div class="contact-panel"><p class="lead" style="margin:0">For project enquiries, advisory discussions and potential collaborations, Cavenor welcomes a clear outline of the project, its current stage and the support being considered.</p><p class="body-copy" style="margin:18px 0 0">Our direct contact details will be added here once confirmed.</p></div>
+ </div>
+</section>
+<footer class="site-footer">CAVENOR PROJECT ADVISORY <span aria-hidden="true">·</span> KENYA</footer>
+
 </main>
 </body>
 </html>
