@@ -216,6 +216,27 @@ main:before{
 .site-nav{z-index:3}
 @media(prefers-reduced-motion:reduce){.landing-image:after{animation:none;display:none}}
 
+
+/* Executive-facing calls to action and authority section */
+.hero-cta{
+ position:absolute;z-index:4;top:62%;left:50%;transform:translateX(-50%);
+ display:inline-flex;align-items:center;justify-content:center;gap:12px;
+ padding:clamp(9px,1.05vw,15px) clamp(17px,2vw,28px);
+ border:1px solid rgba(255,220,145,.95);border-radius:999px;
+ color:#080b12;background:linear-gradient(115deg,rgba(212,175,55,.96),rgba(246,220,151,.94),rgba(185,139,39,.96));
+ box-shadow:0 0 24px rgba(212,175,55,.2),inset 0 1px rgba(255,255,255,.35);
+ text-decoration:none;font:800 clamp(9px,.9vw,13px)/1 Arial,sans-serif;letter-spacing:.12em;
+ transition:transform .25s ease,box-shadow .25s ease,filter .25s ease;
+}
+.hero-cta:hover,.hero-cta:focus-visible{transform:translateX(-50%) translateY(-3px);box-shadow:0 8px 30px rgba(212,175,55,.34);filter:brightness(1.08);outline:none}
+.contact-details{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:18px}
+.contact-details p{display:flex;flex-direction:column;gap:8px;margin:0;padding:16px;border:1px solid rgba(212,175,55,.32);border-radius:12px;background:rgba(255,255,255,.025);color:#d8dee8;font:13px/1.5 Arial,sans-serif}
+.contact-details strong{color:#f1d17b;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.contact-details span{color:#b9c1ce}
+.why-grid .content-card{min-height:100%}
+@media(max-width:700px){.hero-cta{top:62%;padding:8px 13px;font-size:8px;gap:7px}.contact-details{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.hero-cta{transition:none}}
+
 </style>
 </head>
 <body>
@@ -265,13 +286,14 @@ main:before{
 <nav class="site-nav" aria-label="Main navigation">
 <a href="#home">HOME</a><a href="#about-us">ABOUT US</a><a href="#services">SERVICES</a><a href="#our-approach">OUR APPROACH</a><a href="#insights">INSIGHTS</a><a href="#contact">CONTACT</a>
 </nav>
+<a class="hero-cta" href="#contact">DISCUSS YOUR PROJECT <span aria-hidden="true">↗</span></a>
 </section>
 
 <section id="about-us" class="content-section">
  <div class="section-inner">
   <p class="eyebrow">About Cavenor</p>
   <h1>Clarity in planning. Confidence in delivery.</h1>
-  <p class="lead">Cavenor Project Advisory is a Kenya-focused project management consultancy concept dedicated to supporting better planning, stronger project controls and more accountable delivery across construction and infrastructure projects.</p>
+  <p class="lead">Cavenor is being developed to support developers, investors and public institutions across Kenya with clearer project planning, stronger controls and practical advice designed to reduce delivery friction, safeguard budgets and keep construction and infrastructure projects on course.</p>
   <div class="content-grid">
    <article class="content-card"><h3>Our purpose</h3><p>To bring structure, accountability and professional discipline to development projects—helping decision-makers see what needs to happen, understand what is happening and act with greater confidence.</p></article>
    <article class="content-card"><h3>Our mission</h3><p>To advance effective project planning and responsible resource management through strategic, professional and innovative project management advisory.</p></article>
@@ -283,30 +305,42 @@ main:before{
 </section>
 <section id="services" class="content-section">
  <div class="section-inner">
-  <p class="eyebrow">What we focus on</p><h2>Project advisory services</h2>
-  <p class="lead">A considered range of project management and advisory disciplines designed around the demands of construction and infrastructure development.</p>
+  <p class="eyebrow">What we focus on</p><h2>Strategic project advisory services</h2>
+  <p class="lead">A proposed suite of project management disciplines designed to help clients make informed decisions, strengthen oversight and manage delivery risk across construction and infrastructure development.</p>
   <div class="service-grid">
-   <article class="service-card"><span class="service-number">01 / PLAN</span><h3>Project Planning &amp; Development</h3><p>Feasibility coordination, project preparation, implementation frameworks and practical project schedules.</p></article>
-   <article class="service-card"><span class="service-number">02 / DELIVER</span><h3>Construction Project Management</h3><p>Coordination of project participants, progress reviews, delivery schedules and structured project communication.</p></article>
-   <article class="service-card"><span class="service-number">03 / CONTROL</span><h3>Project Controls Advisory</h3><p>Schedule, cost and resource monitoring, performance dashboards and early-warning reporting.</p></article>
-   <article class="service-card"><span class="service-number">04 / PROCURE</span><h3>Procurement &amp; Contract Coordination</h3><p>Procurement planning, tender-process support, contract coordination and contractor performance tracking.</p></article>
-   <article class="service-card"><span class="service-number">05 / ASSURE</span><h3>Project Assurance &amp; Performance</h3><p>Project health reviews, performance assessments, risk reviews and delay analysis.</p></article>
-   <article class="service-card"><span class="service-number">06 / RECOVER</span><h3>Project Recovery Advisory</h3><p>Assessment of underperforming or stalled projects, recovery planning and implementation support.</p></article>
-   <article class="service-card"><span class="service-number">07 / UNDERSTAND</span><h3>Project Intelligence &amp; Research</h3><p>Sector studies, project-performance research and commissioned analytical reports.</p></article>
+   <article class="service-card"><span class="service-number">01 / PLAN</span><h3>Strategic Project Planning &amp; Feasibility</h3><p>Early-stage project alignment, site and constraint reviews, stakeholder mapping, feasibility coordination and implementation frameworks to establish a sound foundation before delivery begins.</p></article>
+   <article class="service-card"><span class="service-number">02 / DELIVER</span><h3>Construction Project Management &amp; Coordination</h3><p>Structured coordination of project participants, programme monitoring, quality-assurance coordination and clear stakeholder communication from mobilisation through handover.</p></article>
+   <article class="service-card"><span class="service-number">03 / CONTROL</span><h3>Advanced Project Controls &amp; Monitoring</h3><p>Cost, schedule and resource tracking supported by clear performance reporting, variance analysis and early-warning indicators for timely decisions.</p></article>
+   <article class="service-card"><span class="service-number">04 / PROCURE</span><h3>Procurement &amp; Contract Governance</h3><p>Procurement strategy support, tender documentation coordination, bid evaluation support, contract administration coordination and contractor performance monitoring.</p></article>
+   <article class="service-card"><span class="service-number">05 / ASSURE</span><h3>Independent Project Assurance &amp; Reviews</h3><p>Objective project health checks, risk and performance assessments, review of project controls and schedule variance analysis to strengthen oversight.</p></article>
+   <article class="service-card"><span class="service-number">06 / RECOVER</span><h3>Stalled &amp; Underperforming Project Recovery</h3><p>Root-cause assessment, recovery option development, revised delivery planning and coordination support for projects facing delay or performance challenges.</p></article>
+   <article class="service-card"><span class="service-number">07 / UNDERSTAND</span><h3>Sector Intelligence &amp; Research Advisory</h3><p>Construction and infrastructure market studies, project-performance research, trend analysis and commissioned reports to inform planning and investment decisions.</p></article>
   </div>
   <p class="body-copy" style="margin-top:24px">Cavenor’s advisory focus is project management and coordination. It is not positioned as a building contractor or as a substitute for the statutory work of appropriately licensed engineers, architects or quantity surveyors.</p>
  </div>
 </section>
+
+<section id="why-cavenor" class="content-section">
+ <div class="section-inner">
+  <p class="eyebrow">The Cavenor difference</p><h2>Why Cavenor</h2>
+  <p class="lead">A project advisory philosophy built around the client's interests, disciplined oversight and practical accountability.</p>
+  <div class="content-grid why-grid">
+   <article class="content-card"><h3>Independent perspective</h3><p>Advice structured around the client's project objectives, with clear visibility of scope, risks, responsibilities and performance.</p></article>
+   <article class="content-card"><h3>Kenya-focused context</h3><p>A locally focused approach that considers relevant Kenyan project conditions, approval pathways and statutory requirements, alongside recognised project-management practices.</p></article>
+   <article class="content-card"><h3>Accountability in action</h3><p>Clear reporting should do more than describe problems. It should help decision-makers understand the issue, assess options and agree practical next steps.</p></article>
+  </div>
+ </div>
+</section>
 <section id="our-approach" class="content-section">
  <div class="section-inner">
-  <p class="eyebrow">Our approach</p><h2>A disciplined path from brief to close-out.</h2>
-  <p class="lead">Good project outcomes depend on clear responsibilities, reliable information and timely decisions. Our proposed delivery framework is built around five connected stages.</p>
+  <p class="eyebrow">Our approach</p><h2>The Cavenor Delivery Framework</h2>
+  <p class="lead">A disciplined, five-stage lifecycle designed to reduce uncertainty, strengthen oversight and help protect project investment from initial assessment through close-out.</p>
   <div class="approach-list">
-   <article class="approach-step"><b>01</b><h3>Scope &amp; assess</h3><p>Understand the project brief, objectives, constraints, stakeholders and current position.</p></article>
-   <article class="approach-step"><b>02</b><h3>Plan &amp; mobilise</h3><p>Establish priorities, responsibilities, programme expectations and reporting arrangements.</p></article>
-   <article class="approach-step"><b>03</b><h3>Monitor &amp; coordinate</h3><p>Track progress, surface issues and support structured communication and decision-making.</p></article>
-   <article class="approach-step"><b>04</b><h3>Review &amp; advise</h3><p>Assess performance, risks and emerging variances, then identify practical actions.</p></article>
-   <article class="approach-step"><b>05</b><h3>Evaluate &amp; close</h3><p>Review outcomes, document lessons and support an orderly project close-out.</p></article>
+   <article class="approach-step"><b>01</b><h3>Scope &amp; Assess</h3><p>Examine the project brief, site and delivery constraints, applicable regulatory considerations and stakeholder objectives to establish a realistic baseline.</p></article>
+   <article class="approach-step"><b>02</b><h3>Plan &amp; Mobilise</h3><p>Develop the master programme, resource assumptions, risk profile, responsibilities and governance arrangements needed to align project participants.</p></article>
+   <article class="approach-step"><b>03</b><h3>Monitor &amp; Coordinate</h3><p>Track delivery progress, quality and key cost and schedule indicators, with transparent reporting that helps stakeholders act on emerging issues.</p></article>
+   <article class="approach-step"><b>04</b><h3>Review &amp; Advise</h3><p>Analyse variances, assess emerging risks and recommend practical interventions before issues escalate into greater time or cost impacts.</p></article>
+   <article class="approach-step"><b>05</b><h3>Evaluate &amp; Close</h3><p>Coordinate close-out reviews, outstanding-works and handover tracking, financial close-out inputs and structured lessons-learned reviews.</p></article>
   </div>
  </div>
 </section>
@@ -322,8 +356,8 @@ main:before{
 </section>
 <section id="contact" class="content-section">
  <div class="section-inner">
-  <p class="eyebrow">Contact</p><h2>Let’s start with the project brief.</h2>
-  <div class="contact-panel"><p class="lead" style="margin:0">For project enquiries, advisory discussions and potential collaborations, Cavenor welcomes a clear outline of the project, its current stage and the support being considered.</p><p class="body-copy" style="margin:18px 0 0">Our direct contact details will be added here once confirmed.</p></div>
+  <p class="eyebrow">Contact</p><h2>Let’s Protect Your Next Project.</h2>
+  <div class="contact-panel"><p class="lead" style="margin:0">Whether you are preparing a new commercial development, reviewing a project facing delays or considering independent advisory oversight, Cavenor is being developed to bring greater structure, visibility and discipline to project decisions.</p><p class="body-copy" style="margin:22px 0 8px">Reach out to initiate an advisory discussion:</p><div class="contact-details"><p><strong>Email</strong><span>To be confirmed</span></p><p><strong>Phone / WhatsApp</strong><span>To be confirmed</span></p><p><strong>Office location</strong><span>To be confirmed</span></p></div></div>
  </div>
 </section>
 <footer class="site-footer">CAVENOR PROJECT ADVISORY <span aria-hidden="true">·</span> KENYA</footer>
